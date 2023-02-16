@@ -1,0 +1,299 @@
+    @charset "UTF-8";
+    *{padding: 0; margin: 0;}
+    html { font-family: "Ropa Sans", sans-serif; 
+        font-size: 16px; line-height: 1.5; }
+    
+    h1, h2, h3, p, ul { margin: 0; }
+    ul { padding-left: 0; }
+    ul li { list-style-type: none; }
+    a { color: inherit; text-decoration: none; }
+    img { vertical-align: middle; }
+
+    .page-header {
+        background-color: rgb(255, 255, 255);
+        height:120px;  width: 100%;  
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25); 
+        
+            position: fixed;
+            top: 0;
+        display: block;
+        z-index: 2000;
+    }
+
+    .page-header.sticky { position: fixed; top: 0; }
+    /* 스크롤양이 많아져 sticky class가 붙었을때의 위치 */
+
+    .page-header > .inner { 
+        margin: auto; width: 1500px;  }
+
+    .no-boxshadow .page-header {
+        border-bottom: 1px solid rgb(204, 204, 204);
+    }
+
+    /* 로고*/
+    .site-logo {
+        float: left;
+        margin-left: -20px;
+    }
+
+    /* 네비게이션 */
+    .primary-nav {
+        float: right;
+        line-height: 65px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    .primary-nav li {
+        float: left;
+    }
+    .primary-nav a {
+        display: block;
+        padding: 0 1.36em;
+    }
+    .primary-nav a:hover {
+        background-color: rgb(240, 240, 240);
+    }
+    .primary-nav .cart_img{
+        margin-right: -30px;
+    } 
+    .primary-nav .category{
+        line-height: 55px;
+    }
+    /* 검색 */
+    .search-container{
+        position: relative;
+    }
+    .primary-nav input{
+        border-radius: 10px;
+        width: 600px;
+        height: 40px;
+        font-size: 20px;
+        border: 2px solid black;
+        outline: 0;
+    }
+    .search-btn{
+        position: absolute; width: 40px; height: 40px; background: none;
+        color: rgb(255, 255, 255); border: 0; cursor: pointer;
+        top: 10px; bottom: 0px; right:10px;
+    }
+    /* ------------------------------------------------------------------ */
+    .container-all{
+        padding: 0px 50px 0px 50px;
+    }
+    .container{ 
+        width: 100%; height: 100%;
+       position: relative;
+        top: 120px;
+       
+    }
+    /* 지역명 */
+    .whereBox{
+        width: 100%; height: 100px;
+        background-image: url(/project/img/seoul.jpg);
+    }
+    /* BODY */
+    .contentBox{display: flex;}
+
+    /* 필터Box */
+    .filterBox{ border: 1px solid teal;
+        width: 230px;
+        background-color: skyblue;
+        color: #fff;
+    }
+    /* 필터날짜 */
+    .today{ 
+        width: 100%;height: 50px;
+        padding-top: 15px; margin-left: 10px;
+    }
+    /* 필터 출발지 도착지 */
+    .promotion{ 
+        width: 230px; height: 250px;
+    }
+    .filterPlaceBox{border: 1px solid yellow;
+        width: 230px; height: 100px;  display: flex;
+    }
+    .filterPlace{border:1px solid darkblue;
+        width: 120px;height: 70px; margin: 5px; border-radius: 100%;
+        text-align: center; 
+    }
+    .filterStartPlace{ border: 1px solid salmon;
+        width: 100%; height: 100%;
+        display: block; text-align: center;
+    }
+    /* ↓↑합차기 */
+    .filterEndPlace{ border: 1px solid salmon;
+        width: 100%; height: 100%;
+        display: block; text-align: center;
+    }
+    /* 필터 시간 */
+    .delay{
+        width: 100%; height: 20px; display: block; text-align: right;
+        font-size: 12px;
+    }
+    /* 필터 거리 */
+    .distance{  text-align: right;
+        width: 100%; height: 20px; display: block;
+        font-size: 12px;
+    }
+    /* 필터 요금 */
+    .payInfo{
+        width: 100%; height: 100%; 
+    }
+    .nomalPay{text-align: right; }
+    .payInfo-text{ text-align: left; position: relative; top: 25px;}
+ 
+    dt{text-align: left;}
+    
+    dd{text-align: right; position: relative;top: -25px;}
+
+    /* 버스시간표 */
+    .schedulBox{ border: 2px solid purple;
+        width: 1550px; height: 640px; min-height: 640px;
+        margin-left: 50px; 
+        position: relative;
+    }
+    /* 버스날짜박스 */
+    .calenderBox{ border-bottom: 2px solid purple;
+         height: 80px;
+        position: relative; 
+    }
+    .calenderBox::after{display: block; content: ""; clear: both;}
+
+    /* 새로고침 */
+    .refreshBox{ border-right: 2px solid purple;
+        float: none;
+        width: 88px; height: 100%;
+        position: absolute; top: 0; left: 0;
+        z-index: 100;
+        padding: 10px; box-sizing: border-box;
+    }
+    .refresh{
+        width: 65px;height: 100%;
+        background-color: #f3f4f6;
+        border: 0;
+        position: relative; display: inline-block; vertical-align: middle; line-height: 1.2;
+        
+    }
+    .refresh-icon{ 
+        background-image: url(/project/img/refresh.png);
+        
+        text-indent: -9999px;
+        display: block;
+        width: 100%; height: 100%;
+    }
+    /* 버스날짜텍스트 */
+    .date{
+        float: left; position: relative; display: block;
+        height: 100%; width: 100%;
+        font-size: 0; 
+        text-align: center;  
+    }
+    .date-text{
+        font-size: 22px; font-weight: bold; text-align: center; line-height: 65px;
+    }
+    /* 버스달력이미지 */
+    .date-calender{
+        position: absolute; top: 15px; right: 15px; width: 50px; height: 50px; z-index: 10;
+        cursor: pointer;
+    }
+    .calender{ 
+         display: inline-block; position: absolute; top: 0;right: 0;
+         background: #f3f4f6; 
+         width: 65px; height: 65px; margin: 8px; line-height: 40px;}
+
+    /* 버스 body */
+    .detailSchedulBox{height: 575px; position: relative; display: block;}
+
+    /* night daytime */
+    .timetableBox{ border: 1px solid skyblue;
+        position: absolute; float: none;
+        top: 0; left: 0 ; z-index: 100;
+        width: 65px; height: 100%;
+        list-style: none;  
+    }
+    .timetableBox::before{
+        display: inline-block; content: ''; position: absolute; top: 5px; left: 8px;
+    }
+        
+    .night{position: relative; margin-top: 8px; padding-right: 8px; box-sizing: border-box;}
+    .daytime{position: relative; margin-top: 8px; padding-right: 8px; box-sizing: border-box;}
+    .night::before{
+        background-image: url(/project/img/night.png) 0 0 no-repeat;
+        background-size: auto 100%;
+        width: 14px; height: 14px;
+    }
+    .daytime::before{
+        background-image: url(/project/img/daytime.png) 0 0 no-repeat;
+        background-size:100%;
+        width: 16px; height: 16px;
+    }
+    .date-time{
+        display: block;
+        padding: 2px 8px 2px 0;
+        font-size: 14px; text-align: right;
+        color: #68b3ce;
+        box-sizing: border-box;
+        
+    }
+    /* 버스세부스케쥴 */
+    .busTime{ border: 1px solid blue;
+        width: 100%; height: 575px;
+        box-sizing: border-box;
+        padding-left: 65px;
+        position: relative;
+    }
+    .busTime::before{
+        display: inline-block;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 64px;
+        background: #e6e6e6;
+        width: 1px;
+        height: 100%;
+    }
+    /* 버스타임 헤더 */
+    .busTime-head{
+        display: table; width: 100%; min-height: 33px; padding: 0 15px 0 20px;
+        border-bottom: 1px solid #e6e6e6;   box-sizing: border-box; font-size: 15px;
+        line-height: 1.5;
+    }
+    .busStart{width: 130px; text-align: left; vertical-align: middle; display: table-cell;}
+    .busFind{width: 170px; display: table-cell; text-align: left; vertical-align: middle;}
+    .busGrade{width: 125px; display: table-cell; text-align: left; vertical-align: middle;}
+    .busTemp{width: 120px; display: table-cell; text-align: left; vertical-align: middle;}
+    .busRemain{width: 120px; display: table-cell; text-align: left; vertical-align: middle;}
+    .busClear{width: auto; display: table-cell; text-align: left; vertical-align: middle;}
+    /* 버스시간 디테일 */
+    .busTime-detail{
+        height: 540px;
+        margin-left: 20px;
+        overflow-y: auto;
+    }
+    .busTd{
+        position: relative; border-bottom: 1px solid #e6e6e6;
+    }
+    .busTd a{ height: 54px; display: table; width: 100%; position: relative; text-decoration: none;}
+    /* 디테일 출발 */
+    .start-time{
+        width: 120px; font-size: 18px;  display: table-cell; text-align: left; vertical-align: middle;
+    }
+    /* 고속사 */
+    .bus_com{width: 180px; display: table-cell; padding-top: 15px; vertical-align: top; line-height: 1;
+    text-align: left; }
+    .doubu{display: table-cell; text-align: left; vertical-align: middle;
+         width: 89px; height: 25px; 
+        font-size: 0; background-image: url(/project/img/dongbu.png) 0 0 no-repeat; }
+    /* 등급 */
+    .grade{width: 125px; font-size: 14px;}
+    .via{display: block; font-size: 8px;  }
+    /* 할인 */
+    .temp{width: 105px; display: table-cell; }
+    /* 잔여석 */
+    .remain{ padding-right: 30px; text-align: left; box-sizing: border-box; }
+    /* 선택 */
+    .status {width: auto; font-size: 13px;}
+    .status-icon{padding-right: 11px; color: #68b3ce;
+        background: url(/project/img/btn_arrow.png) right center no-repeat; }
+    
+    

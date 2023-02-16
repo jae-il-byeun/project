@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bus2</title>
+    <script src="/js/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="/project/bus/bus2.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header class="page-header" role="banner">
+        <div class="inner">
+            <h1 class="site-logo"><a href="./"><img src="/project/img/travel.png" alt="logo"></a></h1>
+            <nav class="primary-nav" role="navigation">
+                <ul>
+                    <li>
+                        <!-- <div class="search-container">
+                            <input type="text" placeholder="오늘 뭐할까">
+                            <button type="submit"><img src="./img/search.png" alt=""></button>
+                        </div> -->
+                        <form action="" class="search-container">
+                            <input type="text" class="search-input" placeholder="검색">
+                            <button type="submit" class="search-btn"><img src="/project/img/search.png" alt="버튼"></button>
+                        </form>
+                    </li>
+                    <li><a href="./">About</a></li>
+                    <li><a href="./">Work</a></li>
+                    <li><a href="./">고객센터</a></li>
+                    <li class="login"><a href="#">로그인</a>
+                    </li>
+                    <li class="cart_img"><a href="./"><img src="/project/img/cart.png" alt="logo"></a></li>
+                </ul>
+                <ul class="category">
+                    <li><a href="./">추천</a></li>
+                    <li><a href="./">국내숙소</a></li>
+                    <li><a href="./">레저문화</a></li>
+                    <li><a href="./">해외여행</a></li>
+                    <li><a href="./">커뮤니티</a></li>
+                </ul>
+    
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container-all">
+        <div class="container">
+            <div class="whereBox"></div>
+            <div class="contentBox">
+                <div class="filterBox">
+                    <p class="today">2023.02.16.목</p>
+                    <div class="promotion">
+                        <div class="filterPlaceBox">
+                            <p class="filterPlace">서울</p>
+                            <span class="filterStartPlace">서울경기</span>
+                        </div>
+                        <div class="filterPlaceBox">
+                            <p class="filterPlace">서울</p>
+                            <span class="filterEndPlace">서울경기</span>
+                        </div>
+                        <span class="delay">1시간 40분 소요</span>
+                        <span class="distance">1.34km</span>
+                    </div>
+                    
+                    <div class="payInfo">
+                        <div class="nomalPay">
+                            <p class="payInfo-text">요금정보</p>
+                            <span class="nomalPay-text">(일반요금)</span>
+                        </div>
+                        <hr>
+                        <div class="pay"></div>
+                        <dt>우등</dt>
+                        <dd>10,000원</dd>
+                        <dt>고속</dt>
+                        <dd>10,000원</dd>
+                        <dt>심야우등</dt>
+                        <dd>10,000원</dd>
+                        <dt>심야우등할증</dt>
+                        <dd>10,000원</dd>
+                        <dt>심야고속</dt>
+                        <dd>10,000원</dd>
+                        <dt>심야고속할증</dt>
+                        <dd>10,000원</dd> 
+                    </div>
+
+                </div>
+                <div class="schedulBox">
+                    <div class="calenderBox">
+                        <div class="refreshBox">
+                            <button type="button" class="refresh">
+                                <span class="refresh-icon">새로고침</span>
+                            </button>
+                            
+                        </div>
+                        <div class="date">
+                            <span class="date-text">2023.2.15.수</span>
+                        
+                        <img class="date-calender" src="/project/img/calender.png" alt="">
+                        <span class="calender"></span>
+                        </div>
+                    </div>
+                    <div class="detailSchedulBox">
+                        <ul class="timetableBox">
+                            <li class="night">
+                                <a href="#" class="date-time">1</a>
+                            </li>
+                            <li class="night">
+                                <a href="#" class="date-time">3</a>
+                            </li>
+                            <li class="daytime">
+                                <a href="#" class="date-time">5</a>
+                            </li>
+                            <li class="daytime">
+                                <a href="#" class="date-time">7</a>
+                            </li>
+                            <li class="daytime">
+                                <a href="#" class="date-time">9</a>
+                            </li>
+                            <li class="daytime">
+                                <a href="#" class="date-time">11</a>
+                            </li>
+                            <li class="daytime">
+                                <a href="#" class="date-time">13</a>
+                            </li>
+                            <li class="daytime">
+                                <a href="#" class="date-time">15</a>
+                            </li>
+                            <li class="daytime">
+                                <a href="#" class="date-time">17</a>
+                            </li>
+                            <li class="daytime">
+                                <a href="#" class="date-time">19</a>
+                            </li>
+                            <li class="night">
+                                <a href="#" class="date-time">21</a>
+                            </li>
+                            <li class="night">
+                                <a href="#" class="date-time">23</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="busTime">
+                        <p class="busTime-head">
+                            <span class="busStart">출발</span>
+                            <span class="busFind">고속사</span>
+                            <span class="busGrade">등급</span>
+                            <span class="busTemp">할인</span>
+                            <span class="busRemain">잔여석</span>
+                            <span class="busClear"></span>
+                        </p>
+                        <div class="busTime-detail">
+                            <p class="busTd">
+                                <a href="">
+                                    <span class="start-time">06:00</span>
+                                    <span class="bus_com">
+                                        <span class="dongbu">동부고속</span>
+                                    </span>
+                                    <span class="grade">우등
+                                        <span class="via">(문막경유)</span>
+                                    </span>
+                                    <span class="temp"></span>
+                                    <span class="remain">25석</span>
+                                    <span class="status">
+                                        <span class="status-icon">선택</span>
+                                    </span>
+                                </a>
+                                
+                            </p>
+                            <p class="busTd">
+                                <a href="">
+                                    <span class="start-time">06:00</span>
+                                    <span class="bus_com">
+                                        <span class="dongbu">동부고속</span>
+                                    </span>
+                                    <span class="grade">우등
+                                        <span class="via">(문막경유)</span>
+                                    </span>
+                                    <span class="temp"></span>
+                                    <span class="remain">25석</span>
+                                    <span class="status">
+                                        <span class="status-icon">선택</span>
+                                    </span>
+                                </a>
+                            </p>
+                            <p class="busTd">
+                                <a href="">
+                                    <span class="start-time">06:00</span>
+                                    <span class="bus_com">
+                                        <span class="dongbu">동부고속</span>
+                                    </span>
+                                    <span class="grade">우등
+                                        <span class="via">(문막경유)</span>
+                                    </span>
+                                    <span class="temp"></span>
+                                    <span class="remain">25석</span>
+                                    <span class="status">
+                                        <span class="status-icon">선택</span>
+                                    </span>
+                                </a>
+                            </p>
+                            <p class="busTd">
+                                <a href="">
+                                    <span class="start-time">06:00</span>
+                                    <span class="bus_com">
+                                        <span class="dongbu">동부고속</span>
+                                    </span>
+                                    <span class="grade">우등
+                                        <span class="via">(문막경유)</span>
+                                    </span>
+                                    <span class="temp"></span>
+                                    <span class="remain">25석</span>
+                                    <span class="status">
+                                        <span class="status-icon">선택</span>
+                                    </span>
+                                </a>
+                            </p>
+                            <p class="busTd">
+                                <a href="">
+                                    <span class="start-time">06:00</span>
+                                    <span class="bus_com">
+                                        <span class="dongbu">동부고속</span>
+                                    </span>
+                                    <span class="grade">우등
+                                        <span class="via">(문막경유)</span>
+                                    </span>
+                                    <span class="temp"></span>
+                                    <span class="remain">25석</span>
+                                    <span class="status">
+                                        <span class="status-icon">선택</span>
+                                    </span>
+                                </a>
+                            </p>
+                            <p class="busTd">
+                                <a href="">
+                                    <span class="start-time">06:00</span>
+                                    <span class="bus_com">
+                                        <span class="dongbu">동부고속</span>
+                                    </span>
+                                    <span class="grade">우등
+                                        <span class="via">(문막경유)</span>
+                                    </span>
+                                    <span class="temp"></span>
+                                    <span class="remain">25석</span>
+                                    <span class="status">
+                                        <span class="status-icon">선택</span>
+                                    </span>
+                                </a>
+                            </p>
+                            <p class="busTd">
+                                <a href="">
+                                    <span class="start-time">06:00</span>
+                                    <span class="bus_com">
+                                        <span class="dongbu">동부고속</span>
+                                    </span>
+                                    <span class="grade">우등
+                                        <span class="via">(문막경유)</span>
+                                    </span>
+                                    <span class="temp"></span>
+                                    <span class="remain">25석</span>
+                                    <span class="status">
+                                        <span class="status-icon">선택</span>
+                                    </span>
+                                </a>
+                            </p>
+                            <p class="busTd">
+                                <a href="">
+                                    <span class="start-time">06:00</span>
+                                    <span class="bus_com">
+                                        <span class="dongbu">동부고속</span>
+                                    </span>
+                                    <span class="grade">우등
+                                        <span class="via">(문막경유)</span>
+                                    </span>
+                                    <span class="temp"></span>
+                                    <span class="remain">25석</span>
+                                    <span class="status">
+                                        <span class="status-icon">선택</span>
+                                    </span>
+                                </a>
+                            </p>
+                            <p class="busTd">
+                                <a href="">
+                                    <span class="start-time">06:00</span>
+                                    <span class="bus_com">
+                                        <span class="dongbu">동부고속</span>
+                                    </span>
+                                    <span class="grade">우등
+                                        <span class="via">(문막경유)</span>
+                                    </span>
+                                    <span class="temp"></span>
+                                    <span class="remain">25석</span>
+                                    <span class="status">
+                                        <span class="status-icon">선택</span>
+                                    </span>
+                                </a>
+                            </p>
+                            <p class="busTd">
+                                <a href="">
+                                    <span class="start-time">06:00</span>
+                                    <span class="bus_com">
+                                        <span class="dongbu">동부고속</span>
+                                    </span>
+                                    <span class="grade">우등
+                                        <span class="via">(문막경유)</span>
+                                    </span>
+                                    <span class="temp"></span>
+                                    <span class="remain">25석</span>
+                                    <span class="status">
+                                        <span class="status-icon">선택</span>
+                                    </span>
+                                </a>
+                            </p>
+                            <p class="busTd">
+                                <a href="">
+                                    <span class="start-time">06:00</span>
+                                    <span class="bus_com">
+                                        <span class="dongbu">동부고속</span>
+                                    </span>
+                                    <span class="grade">우등
+                                        <span class="via">(문막경유)</span>
+                                    </span>
+                                    <span class="temp"></span>
+                                    <span class="remain">25석</span>
+                                    <span class="status">
+                                        <span class="status-icon">선택</span>
+                                    </span>
+                                </a>
+                            </p>
+                            <p class="busTd">
+                                <a href="">
+                                    <span class="start-time">06:00</span>
+                                    <span class="bus_com">
+                                        <span class="dongbu">동부고속</span>
+                                    </span>
+                                    <span class="grade">우등
+                                        <span class="via">(문막경유)</span>
+                                    </span>
+                                    <span class="temp"></span>
+                                    <span class="remain">25석</span>
+                                    <span class="status">
+                                        <span class="status-icon">선택</span>
+                                    </span>
+                                </a>
+                            </p>
+                            <p class="busTd">
+                                <a href="">
+                                    <span class="start-time">06:00</span>
+                                    <span class="bus_com">
+                                        <span class="dongbu">동부고속</span>
+                                    </span>
+                                    <span class="grade">우등
+                                        <span class="via">(문막경유)</span>
+                                    </span>
+                                    <span class="temp"></span>
+                                    <span class="remain">25석</span>
+                                    <span class="status">
+                                        <span class="status-icon">선택</span>
+                                    </span>
+                                </a>
+                            </p>
+                            <p class="busTd">
+                                <a href="">
+                                    <span class="start-time">06:00</span>
+                                    <span class="bus_com">
+                                        <span class="dongbu">동부고속</span>
+                                    </span>
+                                    <span class="grade">우등
+                                        <span class="via">(문막경유)</span>
+                                    </span>
+                                    <span class="temp"></span>
+                                    <span class="remain">25석</span>
+                                    <span class="status">
+                                        <span class="status-icon">선택</span>
+                                    </span>
+                                </a>
+                            </p>
+                            <p class="busTd">
+                                <a href="">
+                                    <span class="start-time">06:00</span>
+                                    <span class="bus_com">
+                                        <span class="dongbu">동부고속</span>
+                                    </span>
+                                    <span class="grade">우등
+                                        <span class="via">(문막경유)</span>
+                                    </span>
+                                    <span class="temp"></span>
+                                    <span class="remain">25석</span>
+                                    <span class="status">
+                                        <span class="status-icon">선택</span>
+                                    </span>
+                                </a>
+                            </p>
+                        </div>
+                        
+                    </div>
+                    
+                    </div>
+                    
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        
+    </footer>
+
+    <script>
+
+    </script>
+</body>
+</html>

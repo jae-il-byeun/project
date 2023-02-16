@@ -1,0 +1,185 @@
+    @charset "UTF-8";
+    *{margin: 0;padding: 0;}
+    ul li { list-style-type: none; }
+    a { color: inherit; text-decoration: none; }
+    ul { padding-left: 0; }
+    html { font-family: "Ropa Sans", sans-serif; font-size: 16px; line-height: 1.5; }
+    .page-header {
+        background-color: rgb(255, 255, 255);
+        height:120px;  width: 100%;  
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25); 
+        
+            position: fixed;
+            top: 0;
+        display: block;
+        z-index: 2000;
+    }
+
+    .page-header.sticky { position: fixed; top: 0; }
+    /* 스크롤양이 많아져 sticky class가 붙었을때의 위치 */
+
+    .page-header > .inner { 
+        margin: auto; width: 1500px;  }
+
+    .no-boxshadow .page-header {
+        border-bottom: 1px solid rgb(204, 204, 204);
+    }
+
+    /* 로고*/
+    .site-logo {
+        float: left;
+        margin-left: -20px;
+    }
+
+    /* 네비게이션 */
+    .primary-nav {
+        float: right;
+        line-height: 65px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    .primary-nav li {
+        float: left;
+    }
+    .primary-nav a {
+        display: block;
+        padding: 0 1.36em;
+    }
+    .primary-nav a:hover {
+        background-color: rgb(240, 240, 240);
+    }
+    .primary-nav .cart_img{
+        margin-right: -30px;
+    } 
+    .primary-nav .category{
+        line-height: 55px;
+    }
+    /* 검색 */
+    .search-container{
+        position: relative;
+    }
+    .primary-nav input{
+        border-radius: 10px;
+        width: 600px;
+        height: 40px;
+        font-size: 20px;
+        border: 2px solid black;
+        outline: 0;
+    }
+    .search-btn{
+        position: absolute; width: 40px; height: 40px; background: none;
+        color: rgb(255, 255, 255); border: 0; cursor: pointer;
+        top: 10px; bottom: 0px; right:10px;
+    }
+    .title{  border: 1px solid #000;
+        width: 100%; height: 120px; margin-bottom: -130px;
+        background-color: teal; margin-bottom: 40px;
+    }
+    .container{ 
+        width: 100%; height: 100%; position: absolute; 
+        margin-left: 40px;
+    }
+    .filterBox{ border: 1px solid #000;
+        width: 200px;height: 600px;
+        margin-left: 150px;
+    }
+    .daybox{position: relative; line-height: -40px; }
+    .btn{ 
+        margin: 5px; 
+        float: right; width: 30px; font-size: 33px;
+        background: none; border: none; margin-right: 10px;
+    }
+    .busBox{ position: relative; 
+        width: 400px; height: 100px; border: 1px solid #000; float: right;
+        margin-right: 20px; 
+    }
+
+    /* ---------------------------------------------------------------------- */
+        .black{
+            max-width: 1280px;
+            width:100%;
+            margin:1em auto;
+            position: fixed;
+            z-index:1000;
+            margin-top: 200px;
+            
+            background-color: black; margin:1em auto;
+        }
+         /* 예약 */
+        .guideBox{ 
+             width: 910px; height: 170px; display: block; 
+            max-width: 100%; margin: 180px auto 0 auto; text-decoration: none;
+            
+            
+            
+        }
+        .place{width: 100%; height: 100%;}
+        .semiTitle{font-style: #fff;}
+        
+        .placeBox{ margin: 5px 5px; padding: 3px; background-color: #f3f4f6;
+            width: 150px; height: 70px; 
+            border-radius: 8px; float: left;
+            
+            
+        }
+        .placeStart{ text-decoration: none;font-size: 16px;}
+        .placeArrival{text-decoration: none;font-size: 16px;}
+
+        
+        .radioBox{position: relative; height: 10px;}
+
+        .countWay{ margin: 5px 5px; padding: 3px; background-color: #f3f4f6;
+            width: 200px; height: 70px; 
+            border-radius: 8px; float: left;
+            text-decoration: none; text-align: center;
+        }
+        .text{font-size: 21px;}
+        .ow{text-align: center;}
+        .btn{font-size: 16px; display: block; width: 60px;}
+
+        /* 이벤트혜택 */
+        .couponBox{ 
+            width: 1400px; height: 200px; margin: 100px 0 0 0;
+            position: absolute; float: left; left: 200px;
+            list-style: none;
+        }
+       .coupon{ width: 1400px; height: 300px;
+       }
+        .img{ display: block;
+            width: 1500px; height: 160px; 
+            background-image: url(/front/html/img/혹등고래2.jpg);
+            background-position: 100%;
+            margin: 10px 0; border-radius: 15px;
+        }
+        /* 추천 장소 */
+        .thirdBox{ 
+            width: 1580px; height: 400px;
+            position: absolute;  float: left; left: 200px; margin-top: 400px;
+        }
+        .adList{list-style: none;}
+        .adImg{ display: block;
+            width: 450px; height: 200px;
+            background-image: url(/front/html/img/ship.jpg);
+            background-position: 100%;
+            float: left; margin-right:70px; margin-top: 10px;
+            border-radius: 15px;
+        }
+        /* 별 쏟아지는 곳 */
+        .fourthBox{ 
+            width: 1580px; height: 300px;
+            position: absolute;  float: left; left: 200px; margin-top: 800px;
+        }
+        .adList2{list-style: none;}
+        .adImg2{ display: block;
+            width: 450px; height: 200px;
+            background-image: url(/front/html/img/ship.jpg);
+            background-position: 100%;
+            float: left; margin-right:70px; margin-top: 10px;
+            
+            border-radius: 15px; 
+        }
+        .text{
+            position: relative; font-size: 14px;
+            box-sizing: border-box;display: block;
+            text-align: left; left: -49px; top:220px
+        }
